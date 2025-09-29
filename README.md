@@ -42,25 +42,25 @@ All these centers are managed by a central class called `Brain`.
 ---
 
 ## Data Structures and Concepts Used
-- **`std::map<std::string, std::shared_ptr<BaseCenter>>`**  
+- `std::map<std::string, std::shared_ptr<BaseCenter>>`
   - Associates the name of a center with the corresponding object.  
   - Allows fast access to centers by a text key.  
 
-- **`std::vector<std::string>`**  
+- `std::vector<std::string>` 
   - Used in `MemoryCenter` to store memorized information.  
 
-- **`std::shared_ptr`**  
+- `std::shared_ptr` 
   - Provides automatic lifetime management of dynamically allocated objects.  
   - Prevents memory leaks and removes the need for manual `delete`.
     
-- **`std::stack<int>` and `std::stack<char>`**  
+- `std::stack<int>` and `std::stack<char>` 
   - Used in `MathCenter` to correctly handle operator precedence and expression evaluation.
     
-- **Binary tree (`LogicNode`)**  
+- Binary tree (`LogicNode`)
   - Represents logical expressions as interconnected nodes.  
   - Allows recursive evaluation of expressions like `AND`, `OR`, `NOT`.  
 
-- **OOP (inheritance and polymorphism)**  
+- OOP (inheritance and polymorphism)
   - All centers inherit from `BaseCenter`.  
   - Polymorphism allows calling the `process` method regardless of the specific center type.
 
